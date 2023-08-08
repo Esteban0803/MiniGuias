@@ -1,0 +1,199 @@
+
+Como aplicar colores o cambios de font en CSS:
+*{
+
+El * se utiliza de manera universal, todo cambio ya sea de font
+o color se le aplicará al codigo entero
+
+}
+
+etiqueta{
+
+A etiqueta nos referimos a "h1", "p", "ol", "li", etc.
+al elegir una etiqueta modificaremos todas las etiquetas que compartan nombre.
+EJ:
+h2{
+ color : red;
+ ahora todos los h2 del codigo seran rojos.
+}
+
+}
+
+.clases{
+
+Este funciona con aquellos elemento que esten dentro de una clase.
+EJ:
+<h1 class= "hola"></h1>
+<p class= "hola"></p>
+
+Ahora cuando llamemos a ".hola{}" y apliquemos los cambios que queramos
+solo se aplicaran para dicha clase y los elemento asociados a ella.
+
+}
+
+#id{
+
+Con el id le damos un valor unico a una etiqueta y solo se afectara a dicha etiqueta
+porque su valor sera unico.
+EJ:
+<p id=unico></p> 
+
+Cuando llamemos a "#unico{}" y apliquemos los cambios. Solo esa etiqueta sufrira el cambio
+
+}
+
+PSEUDOCLASES:
+
+a:link{ //Todos los links no visitados seran del color deseado
+    color: #CC0000;
+}
+
+a:hover{ //Cuando pasemos por el link no visitado cambiara el color al deseado
+	 //tambien cuando pasemos por encima el color del fondo del link cambiara al deseado
+    background-color: yellow;
+    color: #05e66a;
+}
+
+a:visited{ //El color del link visitado sera cambiado por el cual se desea
+    color: #7e0378;
+}
+a:active{ //Parecido al a:hover{} pero solo se activara cuando se haga click en el link.
+    background-color: rgb(67, 77, 11);
+    color: #5fad05;
+}
+
+EJEMPLOS DE PSEUDOCLASES QUE NO ESTAN EN EL CODIGO:
+Focus: Resaltar el borde del campo de entrada cuando obtiene el foco
+       Se utiliza para estilizar elementos enfocados, 
+       como resaltar el borde de un campo de entrada.
+
+  <style>	  
+    input:focus {	  
+      border: 2px solid red;
+    }
+  </style>
+</head>
+<body>
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre">
+</body>
+
+First-child y Last-child: Estilizar el primer y último párrafo de un artículo
+			  para aplicar estilos específicos a los elementos extremos de 
+			  una lista o para estilizar el primer párrafo de un artículo.
+<style>
+    article p:first-child {
+      font-weight: bold;
+    }
+
+    article p:last-child {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <article>
+    <p>Este es el primer párrafo.</p>
+    <p>Este es el segundo párrafo.</p>
+    <p>Este es el último párrafo.</p>
+  </article>
+
+Nth-child(n): Seleccionar y estilizar el segundo y cuarto elemento de la lista
+	      Puedes usar números, fórmulas o incluso palabras clave como "odd" (impares) o 
+	      "even" (pares) para seleccionar elementos específicos. 
+
+<style>
+    li:nth-child(2),
+    li:nth-child(4) {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+    <li>Elemento 4</li>
+    <li>Elemento 5</li>
+  </ul>
+</body>
+
+:nth-of-type(n) y :nth-last-of-type(n): Estilizar el segundo y tercer párrafo de tipo "p"
+					Son similares a :nth-child(n), pero en lugar de seleccionar el n-ésimo hijo de todos los 
+					elementos del mismo tipo, seleccionan el n-ésimo elemento específico de su tipo.
+<style>
+    p:nth-of-type(2),
+    p:nth-last-of-type(2) {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <p>Primer párrafo.</p>
+  <p>Segundo párrafo.</p>
+  <p>Tercer párrafo.</p>
+  <p>Cuarto párrafo.</p>
+</body>
+
+:not(selector): Estilizar todos los párrafos excepto aquellos con la clase "excluir"
+
+<style>
+    p:not(.excluir) {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <p>Este párrafo será estilizado.</p>
+  <p class="excluir">Este párrafo NO será estilizado.</p>
+  <p>Este párrafo también será estilizado.</p>
+</body>
+
+empty: Estilizar los elementos "span" que no contienen contenido 
+
+  <style>
+    span:empty {
+      display: block;
+      width: 50px;
+      height: 50px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <span></span>
+  <span>Contenido aquí</span>
+  <span></span>
+</body>
+
+:checked: Estilizar el elemento "label" cuando el checkbox está marcado
+<style>
+    input[type="checkbox"]:checked + label {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="checkbox1">
+  <label for="checkbox1">Tarea completada</label>
+</body>
+
+UN POCO DE BOOTSTRAP:
+
+.container__cover .jpg img{
+    width: 600px;
+    animation: move-vector 4s linear infinite;
+ }
+ @keyframes move-vector{
+    0%{
+        transform: translateY(15px);
+    }
+    50%{
+        transform: translateY(0px);   
+    }
+    100%{
+        transform: translateY(15px)
+    }
+
+ }

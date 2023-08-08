@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html> //Inicio y final de la pagina
+
+<head> //Metadatos y enlaces externos que no se ven directamente
+
+    <title>Mi primera pagina web</title> //Titulo
+
+</head>
+<body> //Contenido visible de la pagina
+
+    <header>
+        <h1>Hola Mundo</h1> //h1, h2, etc son los distintos encabezanos, a menor nivel menor importancia del encabezado
+        <nav> seccion de navegacion
+
+            <ul> //crean listas sin orden
+
+                <li><a href="#">Inicio</a></li> //define un elemento de lista dentro de la etiqueta
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main> //contenido principañ
+
+        <h2>Contenido Principal</h2>
+        <p>Bienvenido a mi sitio web. Aquí encontrarás información interesante sobre diversos temas.</p> //un parrafo
+
+        <img src="imagen.jpg" width="alto" height="ancho"> //Mostrar una imagen
+
+        <h3>Lista de Elementos</h3>
+        <ul>
+            <li>Elemento 1</li> //define un elemento de lista dentro de la etiqueta
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+        </ul>
+
+        <h3>Formulario de Contacto</h3>
+        <form action="/enviar" method="post">	//crear un formulario que puede contener campos de entrada, 
+						//botones y otros elementos para enviar datos al servidor.
+
+            <label for="nombre">Nombre:</label> //
+
+            <input type="text" id="nombre" name="nombre" required> //Define un campo de entrada que permite al usuario ingresar datos, 
+								   //como texto, números o selecciones.
+
+            <label for="email">Email:</label> //Se utiliza para asociar un texto descriptivo con un elemento de formulario
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+
+    <footer> //informacion adicional y final de la pagina
+        <p>Derechos de autor © 2023 - Mi Sitio Web</p>
+    </footer>
+</body>
+</html>
+
+--------------------------------------------------------------------------------------------
+
+ETIQUETAS QUE NO ESTAN EN EL CODIGO DE EJEMPLO:
+<span></span>
+es como un <p> de menor importancia
+
+Videos:
+<video src="video.mp4" width="alto" height="ancho" controls/>
+IMPORTANTE: El video, normalmente, tiene que ser un mp4, osea tiene que residir en un servidor.
+
+Ahora si se quiere ingresar un video de Youtube u otro reproductor de videos online hay que ir al apartado de "Compartir" 
+y tiene que salir la opcion de "Insertar"
+que dara un codigo <iFrame>. Es importante saber que no todos los videos de Youtube u otros reproductores tienen dicho "Insertar"
+EJ:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VAIn-cUSUHg" title="YouTube video player" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen></iframe>
+
+Audios:	    
+<video src="audio.mp3" controls/>
+IMPORTANTE: El audio, normalmente, tiene que ser un mp3, osea tiene que residir en un servidor.
+
+Formularios:
+<forms></forms>
+apertura y cierre de un formulario
+
+<forms>
+	action: Indica la accion que hará el formulario al enviar la informacion
+	method: Indica el metodo por el cual se enviará el formulario
+
+	<label> Apertura y cierre para una etiqueta de un elemento dentro del formulario
+		for: indica a que input hará referencia la etiqueta
+		input: cuadros de texto donde el usuario ingresa sus datos
+			type: un tipo de input. aca marcaremos el tipo de dato que se 
+			      va a ingresar. EJ: Email, Text, Password, etc.
+			id: asignar una identificacion a cada input para que este sea unico
+
+		<textarea>
+			una zona mas extensa para ingresar datos
+		</textarea>
+	</label>
+</forms>
+
+	<p><label> ¿De donde sos?<br>
+
+            <select id="¿De donde sos?"> 
+                <option value="   "></option>
+                <option value="argentina">Argentina</option>
+                <option value="brazil">Brazil</option>
+                <option value="chile">Chile</option>
+                <option value="uruguay">Uruguay</option>
+                <option value="paraguay">Paraguay</option>
+                <option value="bolivia">Bolivia</option>
+                <option value="otro pais" disable>Otro País</option> //Si agregamos la opcion "disable" deshabilitaremos dicha opcion
+								     //para que no pueda ser seleccionada.
+            </select> 
+
+CheckBox:
+<p>Sexo del Usuario</p>  //Esto esta dentro de un Formulario (Form)
+        <label><input type="checkbox" value="hombre">Hombre</label><br>
+        <label><input type="checkbox" value="mujer">Mujer</label><br>
+        <label><input type="checkbox" value="noBinario">No Binario</label>
+
+Si se quiere cambiar por Circulitos y que te deje marcar uno en vez de varios hay que cambiar
+"checkbox" por "radio"
+
+Como enviar los datos guardados en el Form:
+<form action="otraPaginaWeb.html" method="Post">
+
+	Esto hará que todos los datos que hayan sido guardados en el form
+	sean enviados a otra pagina web donde se van a retener.
+	Es importante agregar el ".html" para que el codigo entienda donde
+	mandar la informacion.
+	Otra cosa importante es que ambos HTMLs esten en la misma carpeta,
+	osea el HTML que manda la informacion y el HTML que la recive deben estar en el 
+	mismo espacio de la carpeta, sino no funcionará.
+	EJ:
+	Carpeta: Ejecicio Web
+	emisor.HTML
+	receptor.HTML 
+
+</form>
+
+Tablas:
+             <table border="1"> <!-- La propiedad border="1" crea bordes en la tabla para visualizarla mejor -->
+        <thead> 
+            <tr> 
+                <th>Año</th> 
+                <th>Disco</th>
+                <th>Cantidad de Canciones</th>
+            </tr>
+        </thead>
+        <tbody> 
+            <tr> 
+                <td>2021</td> 
+                <td>Gusare</td>
+                <td>Catorce(14) Canciones</td>
+            </tr>
+            <tr> 
+                <td>2022</td>
+                <td>Nobi Shigusa Korite Itomagoi</td>
+                <td>Seis(6) Canciones</td>
+            </tr>
+            <tr> 
+                <td>2023</td>
+                <td>Jingougaku</td>
+                <td>Trece(13) Canciones</td>
+            </tr>
+            <!-- Puedes agregar más filas de datos aquí -->
+        </tbody>
+    </table>
+
+<tr></tr>
+Se utiliza para crear una fila en la tabla
+
+<th></th>
+Se utiliza para crear los nombres de las filas
+
+<td></td>
+Se utiliza para rellenar los th con informacion
+
+Listas Ordenadas:
+<ol> //ol (order list) se utiliza para darle cuerpo a la lista
+ <li> Ejemplo1 </li>
+ <li> Ejemplo2 </li> //li se utiliza para marcar los elementos o llenar la lista
+ <li> Ejemplo3 </li>
+ <li> Ejemplo4 </li>
+</ol>
+Cuando se ejecute el codigo en el navegador, nosotros como usuarios veremos esto:
+1. Ejemplo1
+2. Ejemplo2
+3. Ejemplo3
+4. Ejemplo4
+
+O podemos poner:
+<ol start="5" u otro numero que queramos> 
+esto hará que la lista empiece desde 5 y no desde el 1
+
+Otras maneras que tenemos para iniciar una lista son:
+<ol type="a" para que sea en orden alfabetico en minuscula>
+<ol type="A" para que sea en orden alfabetico en mayuscula>
+
+<ol type="i" para que sean numeros romanos en minuscula> 
+<ol type="I" para que sean numeros romanos en mayuscula>
+
+Listas Desordenadas:
+<ul> //ul (unorder list) sirve para darle cuerpo a la lista
+
+ <li> Ejemplo1 </li>
+ <li> Ejemplo2 </li> //li se utiliza para marcar los elementos o llenar la lista
+ <li> Ejemplo3 </li>
+ <li> Ejemplo4 </li>
+
+</ul>
+Cuando se ejecute el codigo en el navegador, nosotros como usuarios veremos esto:
+◉ Ejemplo1
+◉ Ejemplo2
+◉ Ejemplo3
+◉ Ejemplo4
+
+Si queremos que sean cuadrados en lugar de circulos podemos hacer
+<ul style="list-style-type:square">
+■ Ejemplo1
+■ Ejemplo2
+■ Ejemplo3
+■ Ejemplo4
+
+<ul style="list-style-type:circle">
+con este seran cirulos pero sin relleno, un circulo vacio.
+--------------------------------------------------------------------------------------------
+
+COMO COMENTAR EN HTML: Se agregan <!-- texto -->
+<!--Esto es un comentario en HTML-->
+
+NEGRITA, SUBRAYADO Y CURSIVA:
+- <b>texto en negrita</b>
+- <u>texto subrayado</u>
+- <i>texto cursiva</i>
+
+ESPACIADOS
+Espaciados <br>
+
+--------------------------------------------------------------------------------------------

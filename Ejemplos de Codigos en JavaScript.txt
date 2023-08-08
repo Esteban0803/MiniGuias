@@ -1,0 +1,84 @@
+Ejemplos de  Tipos de Datos:
+
+VAR:
+if (true){
+ var nombre = "Esteban";
+}
+
+console.long(nombre);
+Con este codigo en la consola de la pagina va a mostrar el nombre
+
+LET:
+if (true){
+ let nombre = "Esteban";
+}
+
+console.long(nombre);
+Ahora el nombre no va a salir, porque para que el let funcione el 
+"console.long()" debe estar dentro del mismo bloque {}
+
+CONST:
+const numero = 2;
+      numero = 4;
+
+Por mucho que cambie su valor, numero seguira siendo 2, ya que const 
+no puede ser cambiado a lo largo del codigo
+--------------------------------------------------------------
+Ejemplos de Operadores Aritmeticos:
+
+var suma = 35 + 30;
+console.log(suma);
+
+var resta = 10 - 4;
+console.log(resta);
+
+var multipli = 10 * 4;
+console.log(multipli);
+
+var div = 30 / 5;
+console.log(div);
+
+var resto = 27 % 8
+console.log(resto);
+--------------------------------------------------------------
+Ejemplos de Operadores Comparativos: Dan true o false si el codigo da bien o mal
+
+var numero = 5;
+console.log(numero > 2)
+Si el numero es mayor a 2 el codigo devuelve un true sino será un false
+
+var numero = 5;
+console.log(numero == 2)
+Si el numero es igual a 2 el codigo devuelve un true sino será un false
+
+var numero = 5;
+console.log(numero < 2)
+Si el numero es menor a 2 el codigo devuelve un true sino será un false
+
+var numero = 5;
+console.log(numero != 2)
+Si el numero es distinto a 2 el codigo devuelve un true sino será un false
+
+--------------------------------------------------------------
+Operadores Logicos:
+
+AND &&:
+var edad = 18;
+var dni = true;
+
+console.log(edad == 18 && dni = true);
+Ambas opciones estan bien, asi que el codigo devuelve un true. Si una de las
+opciones falla, el codigo devuelve un false.
+
+OR ||:
+var edad = 16;
+var dni = true;
+
+console.log(edad == 18 || dni = true);
+A pesar de que solo se cumpla una condicion el codigo devolvera true.
+
+NOT !:
+var dni = !true;
+
+console.log(true);
+Por mucho que sea true el codigo nos mostrará un false.
