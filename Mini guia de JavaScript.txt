@@ -5,19 +5,49 @@ Para Linkear el ".js" con el Visual Studio:
 Codigo para que el codigo te tome las tildes y Ñ:
 
 <meta http-equiv="Content Type" content="text/html; charset= utf-8"/>
---------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TIPOS DE VENTANAS:
+
 Para crear alertas es:
 
 alert("texto ejemplo");
---------------------------------------------------------------
-Ingresar dato por teclado:
+
+
+INGRESAR POR TECLADO
 
 var nombreVar= prompt("texto ejemplo");
 
 El prompt es SOLO para strings. Si se quiere pasar a numero hay que poner:
 parseInt(prompt();
---------------------------------------------------------------
-Tipos de Variables:
+
+
+INGRESAR DATOS A TRAVER DE UN ALERT
+
+window.prompt("Texto de ejemplo" , "Si se agrega una coma, este msg aparecera despues del primero");
+
+Ej:
+var resp = window.prompt("Cual es tu nombre?");
+alert("Hola Esteban ¿como estas?");
+
+
+CONFIRM
+
+window.confirm("Texto de ejemplo");
+
+Esto hará que salga un cuadro que espera una respuesta ("Aceptar" o "Cancelar")
+
+Ej:
+var resp = window.confirm("Me seguis en instagram?");
+
+if (resp == true){
+	alert("Gracias!");
+} else {
+	alert(":(");
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TIPOS DE VARIABLES:
 
 var: Palabra reservada para indicar que declaramos la variable:
 	EJ: var nombreVariable;
@@ -29,8 +59,9 @@ const: Palabra reservada para indicar que la variable es constante, osea que nun
 let: Palabra reservada para indicar que la variable solo se utilizará en es 
      trozo de codigo, generalmente limitado por {}:
 	EJ: let nombreVariable;
---------------------------------------------------------------
-Tipos de Datos:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TIPOS DE DATOS:
 
 . Numericos:
 	°Number
@@ -48,8 +79,9 @@ Tipos de Datos:
 
 . Undefined: La variable no tiene un valor definido
 	Ej: var nombre = undefined;
---------------------------------------------------------------
-Para mostrar por pantalla es:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MOSTRAR POR CONSOLA:
 
 console.log("infoVar" + nombreVar);
 	Ej: console.log("Mi nombre es: " + nombre);
@@ -58,8 +90,9 @@ Esto es solo visible desde la consola de la pagina web. El usuario no lo ve a si
 console.log("infoVar" + nombreVar + " " + typeof nombreVar);
 	Ej: console.log("Mi nombre es: " + nombre + "espacio en blanco" + typeof nombre);
 Esto sirve para saber de que tipo es dicha variable.
---------------------------------------------------------------
-Operadores Aritmeticos:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OPERADORES ARITMETICOS
 
 Suma +			Suma -> 25 + 50 = 74
 Resta -			Resta -> 35 - 15 = 20
@@ -68,8 +101,9 @@ Division /		Divide -> 500 / 5 = 100
 Modulo %		Da el resto de una division que no es exacta
 Incremento ++		10++ suma 1 cada vez que pase por el codigo
 Decremento --		10-- resta 1 cada vez que pase por el codigo
---------------------------------------------------------------
-Operadores de Comparacion:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OPERADORES DE COMPARACION
 
 Igualdad ==
 Desigualdad (distinto) !=
@@ -80,16 +114,20 @@ Desigualdad Estricta !==
 Mayor o Menor ><
 Mayor o Igual >=
 Menor o Igual <=
---------------------------------------------------------------
-Operadores Condicionales o Logicos:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OPERADORES LOGICOS:
+
 AND &&: Se utiliza cuando se deben cumplir ambas condiciones
 
 OR ||: Se utiliza cuando se debe cumplir una de las condiciones de las planteadas
 
 NOT !: Se utiliza para negar el valor de una condicion. Osea que si es 
        true pasa a ser false y viceversa
---------------------------------------------------------------
-Operadores If y Else:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+IF Y ELSE
+
 If se utiliza cuando queremos decir "Si esto se cumple hace esto" y el
 Else se utiliza cuando queremos decir "Si la primera opcion no se cumplió has esto"
 
@@ -100,8 +138,10 @@ console.log("La persona es mayor de edad");
 } else {
     console.log("La persona es menor de edad");
 }
---------------------------------------------------------------
-Switch:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SWICHT
+
 Permite ingresar varios datos y que el usuario elija el que quiere:
 
 var num1 = parseInt(prompt("Ingrese el primer numero:"));
@@ -138,8 +178,9 @@ switch(opcion){
         console.log("Opcion incorrecta");
     break;
 }
---------------------------------------------------------------
-While: Lo utilizo como estructura repetitiva hasta que se cumpla lo que pido
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+WHILE: Lo utilizo como estructura repetitiva hasta que se cumpla lo que pido
 
 Ej:
 var limite = parseInt(prompt("Ingrese un limite:"));
@@ -165,8 +206,9 @@ if (isNaN(limite) || limite <= 0) { //el isNaN se utiliza para verificar si el n
 
 Ingreso el numero que seria el "Limite" y hasta que no se cumpla ese limite el codigo no va a parar
 de pedirme numeros
---------------------------------------------------------------
-For: El ciclo For es parecido al While. Es un bucle que se repite una serie de veces,
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOR: El ciclo For es parecido al While. Es un bucle que se repite una serie de veces,
      veces las cuales ya estan implicitas en su sintaxis.
 
 console.log("Ejercicio 9");
@@ -188,8 +230,12 @@ En este programa, se utiliza un bucle for para recorrer cada letra de la frase i
 Se utiliza el método charAt(i) para obtener el carácter en la posición i de la frase. Luego, se agrega el carácter a la variable fraseConEspacios. 
 Después de cada carácter (excepto el último), se agrega un espacio en blanco a fraseConEspacios. 
 Finalmente, se muestra la frase con espacios entre cada letra.
---------------------------------------------------------------
-Do While:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DO WHILE: Similar al While pero aca el While se encuentra abajo del todo.
+	  La condicion al estar al final hacer que el bucle se haga como minimo por una vez
+	  una vez llegados al while (final del bucle) se confirma si la condicion se
+	  cumple o no
 
 Ej:
 console.log("-----------------");
@@ -228,8 +274,9 @@ if (numeros.length === 0) {
     console.log("Mínimo número ingresado: " + minimo);
     console.log("Promedio de los números ingresados: " + promedio.toFixed(2));
 }
---------------------------------------------------------------
-Revertir una palabra
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+REVERTIR UNA PALABRA
 
 const reverseWord = palabra => {
     return palabra.split('').reverse().join('');
@@ -247,3 +294,371 @@ y finalmente se vuelve a unir el array en una cadena de texto usando el método 
 Esto resulta en la palabra invertida. 
 Luego, el programa solicita al usuario que ingrese una palabra, llama a la función reverseWord para obtener 
 la palabra invertida y muestra ambas versiones de la palabra en la consola.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FECHAS
+
+var fecha = new Date(); 
+console.log(fecha)		El DATE vacio nos va a tomar el dia de hoy.
+
+var fecha = new Date(2003, 2, 8); 
+console.log(fecha)		De esta manera se va a mostrar MI fecha de nacimiento
+				si bien nací en marzo (que es el mes 3) tuve que poner 
+				mes 2 porque en programacion se empieza a contar desde el 0
+
+var fecha = new Date("08/03/2003"); 
+console.log(fecha)		Si yo lo cambio por un texto voy a poder poner fechas como yo
+				desee. Y asi no tenemos que agregar Año, Mes, Dia.
+
+FUNCIONES ESPECIALES
+
+var fecha = new Date(2003, 2, 8); 
+var dias = fecha.getDate();
+var mes = fecha.getMonth();
+var anio = fechar.getFullYear();
+
+console.log(dias)		De este manera vamos a poder separa los distintos datos
+console.log(mes + 1)		en partes y usarlas como queramos. Al mes le sumo 1 porque
+console.log(anio)		como se le resta un numero y de esta manera lo recuperamos.
+
+
+OTRAS FUNCIONES
+
+getDay() //Devuelve el dia de la semana (de 0 a 6)
+
+getHours() //Devuelve las horas (de 0 a 23)
+
+getMinutes() //Devuelve los minutos (de 0 a 59)
+
+getSeconds() //Devuelve los segundos (de 0 a 59)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+JSON: Es una concepto de "clave-valor". Esto quiere decir que por cada clave hay un valor asociado.
+      El conjunto de claves y valores conforman un objeto, que en JSON se representa mediante
+      llaves "{}". 
+ 
+      Para crear un archivo JSON hay que darle click en "Seleccionar un Idioma" al crear un
+      nuevo archivo y seleccionar JSON.
+Ej:
+[
+
+	{
+  	CLAVE       VALOR
+  	"nombre":   "Cristiano",
+	"apellido": "Ronaldo",
+  	"edad":     36,
+  	"equipos":  ["equipo1", "equipo2", "equipo3"]
+	},
+
+	{
+	CLAVE       VALOR
+  	"nombre":   "Leonel",
+	"apellido": "Messi",
+  	"edad":     34,
+  	"equipos":  ["equipo1", "equipo2", "equipo3"]
+	}
+]  
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SET: El Set puede ser usado para identificar duplicados en Arrays.
+
+Ej:
+var num = new Array(1,1,2,2,3,3,4,4,5,5,6,6,7,7);
+setNum = Array(1,2,3,4,5,6,7);
+
+Ej 2:
+"aassddff".split("");	//Recordemos que el split("") separa el String segun el criterio
+		      	//del usuario.
+"a, a, s, s, d, d, f, f"//Asi se verá el string con el Split
+
+new Set("aassddff".split(""));
+"a, s, d, f"
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MAP:
+
+var mapa = new Map();
+mapa.set(1, "Esteban");
+mapa.set(2, "Giuliana");
+mapa.set(3, "Lucas");
+
+Key = 1, 2 o 3
+Value = Esteban, Giuliana o Lucas
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EVENTOS:
+
+NOMBRE 			DESCRIPCION				DONDE PUEDE SER USADO
+onblur 			Un elemento pierde el foco		<button>, <input>,
+								<label>, <select>,
+								<textarea>, <body>
+
+onchange 		Un elemento ha sido modificado		<input>, <select>,
+								<textarea>
+
+onclick 		Pulsar y soltar el ratón 		Todos los elementos
+
+ondblclick 		Pulsar dos veces seguidas		Todos los elementos
+			con el ratón 
+
+onfocus 		Un elemento obtiene el foco		<button>, <input>,
+								<label>, <select>,
+								<textarea>, <body>
+
+onkeydown 		Pulsar una tecla y no soltarla 		Elementos de formulario y
+								<body>
+
+onkeypress 		Pulsar una tecla 			Elementos de formulario y
+								<body>
+
+onkeyup 		Soltar una tecla pulsada 		Elementos de formulario y
+								<body>
+
+onload 			Página cargada completamente		<body>
+
+onmousedown 		Pulsar un botón del ratón y no		Todos los elementos
+			soltarlo
+
+onmousemove 		Mover el ratón 				Todos los elementos
+
+onmouseout 		El ratón "sale" del elemento 		Todos los elementos
+
+onmouseover 		El ratón "entra" en el elemento 	Todos los elementos
+
+onmouseup 		Soltar el botón del ratón 		Todos los elementos
+
+onreset 		Inicializar el formulario 		<form>
+
+onresize 		Modificar el tamaño de la		<body>
+			ventana
+
+onselect 		Seleccionar un texto 			<input>, <textarea>
+
+onsubmit 		Enviar el formulario 			<form>
+
+onunload 		Se abandona la página, por		<body>
+			ejemplo al cerrar el navegador
+
+OTROS EVENTOS no tan comunes:
+° oncontextmenu: Se activa cuando el usuario hace clic con el botón 
+		 derecho del ratón en un elemento, mostrando el menú contextual del navegador.
+
+° oninput: Se activa cuando el valor de un elemento de entrada cambia, 
+	   independientemente de cómo ocurra el cambio (ya sea mediante el teclado, el ratón u otro método).
+
+° onscroll: Se dispara cuando el contenido de un elemento con desplazamiento, 
+	    como una <div> con un overflow: scroll, se desplaza.
+
+° ondblclick: Pulsar dos veces seguidas con el ratón en un elemento.
+
+° onmouseleave: Similar a onmouseout, pero solo se activa cuando el cursor 
+		sale del área del elemento sin entrar en un elemento secundario.
+
+° onmouseenter: Similar a onmouseover, pero solo se activa cuando el cursor 
+	      entra en el área del elemento sin haber entrado en un elemento secundario.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+El DOM (Document Object Model, en español Modelo de Objetos del Documento) es una representación estructurada y 
+	jerárquica de un documento HTML (o XML) que proporciona una forma de interactuar y manipular los elementos y 
+	contenido de una página web utilizando JavaScript u otros lenguajes de programación.
+
+	En esencia, el DOM permite que los scripts de JavaScript accedan, modifiquen y actualicen los elementos y atributos del documento, a
+	sí como respondan a eventos, como clics de botones o cambios en el contenido. Cada elemento en una página web (etiquetas HTML) 
+	se convierte en un objeto en el DOM, y estos objetos están organizados en una estructura de árbol que refleja la estructura del documento HTML.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SISTEMAS ASINCRONICOS: El asincronismo es especialmente importante debido a la naturaleza de las operaciones de red, 
+		       entrada/salida (E/S) y tareas que pueden tomar tiempo en completarse. En lugar de bloquear la 
+	               ejecución de un programa mientras espera a que estas operaciones se completen (lo que podría llevar mucho tiempo), 
+		       se pueden utilizar técnicas asincrónicas para continuar ejecutando otras tareas y manejar la finalización de esas 
+		       operaciones cuando estén listas
+
+Callbacks: Los callbacks son funciones que se pasan como argumentos a otras funciones y 
+           se ejecutan una vez que se completa una operación asincrónica. 
+	   Procurar no usar muchos Callbacks ya que haría casi ilegible tu codigo
+Ej:
+function fetchData(callback) {
+  setTimeout(() => {
+    const data = { message: "Datos obtenidos mediante callback" };
+    callback(data);
+  }, 1000);
+}
+
+function processData(data) {
+  console.log(data.message);
+}
+
+fetchData(processData);
+
+
+
+Promesas: Las promesas son objetos que representan el resultado eventual (éxito o fallo) 
+	  de una operación asincrónica. Permiten un mejor manejo de las operaciones asincrónicas 
+          y evitan el anidamiento excesivo de callbacks. 
+	  Las promesas ofrecen métodos como then() y catch() para manejar el resultado de la operación.
+Ej:
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const data = { message: "Datos obtenidos mediante promesa" };
+      resolve(data);
+      // En caso de error: reject(new Error("Algo salió mal"));
+    }, 1000);
+  });
+}
+
+fetchData()
+  .then(data => {
+    console.log(data.message);
+  })
+  .catch(error => {
+    console.error(error.message);
+  });
+
+
+
+Async/await: El uso de async/await es una forma más legible y estructurada de manejar operaciones asincrónicas en JavaScript.
+	     La palabra clave async se utiliza para marcar una función como asincrónica, y "await" se utiliza para esperar la 
+	     finalización de una operación asincrónica dentro de una función marcada como "async"
+Ej:
+function fetchData() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const data = { message: "Datos obtenidos mediante async/await" };
+      resolve(data);
+    }, 1000);
+  });
+}
+
+async function processData() {
+  try {
+    const data = await fetchData();
+    console.log(data.message);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+processData();
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FETCH:Es una API de JavaScript que permite realizar solicitudes de red (HTTP) desde un navegador web.
+      Se utiliza comúnmente para obtener datos de recursos externos, como archivos JSON, imágenes
+      u otros tipos de archivos, y para enviar datos a un servidor web.
+
+
+FETCH GET:Se utiliza para recuperar información del servidor. Cuando realizas una solicitud GET, 
+          estás pidiendo al servidor que te envíe un recurso específico.
+
+Ej: 
+fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
+
+FETCH POST:Se utiliza para enviar datos al servidor. Los datos enviados en una solicitud 
+           POST generalmente se incluyen en el cuerpo de la solicitud en lugar de en la URL
+
+Ej:
+fetch('https://api.example.com/data', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    key1: 'value1',
+    key2: 'value2'
+  })
+})
+.then(response => response.json())
+.then(data => {
+  console.log(data);
+})
+.catch(error => {
+  console.error('Error:', error);
+});
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DESTRUCTURING: Destructurar variables
+
+Ej: Variables comunes
+
+let obj = {a: 11, b: 22}
+let {a: aliasA, b: aliasB, c: aliasC 99999} = obj;
+
+console.log(`${aliasA}, ${aliasB}, ${aliasC}`);
+
+Ej: Arrays
+
+let obj = [1, 2, 3, 4, 5];   	//A = 1, B = 2, C = 3 ... otros = resto de numeros
+let {a, b, c, ...otros} = obj;
+
+console.log(`${a}, ${b}, ${c}, ${otros}`);
+
+En un Fetch se puede utilizar para mandar un dato en especifico.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+COMUNICACION Y PERSISTENCIA
+
+Cookies: Las cookies son pequeños fragmentos de datos que se almacenan en el navegador del usuario
+	 y se envían con cada solicitud al servidor. Pueden utilizarse para mantener información de sesión, recordar preferencias del usuario y realizar seguimiento.
+Ej:
+document.cookie = 'usuario=Juan; expires=Thu, 31 Dec 2023 23:59:59 UTC; path=/';
+
+---------------------------------------
+
+LocalStorage y SessionStorage: Estas API permiten a los desarrolladores almacenar datos en el navegador de manera persistente, 
+			       aunque con diferentes alcances. LocalStorage almacena datos sin fecha de vencimiento, mientras que 
+			       SessionStorage almacena datos por sesión, lo que significa que los datos se borran cuando el usuario cierra la pestaña o ventana del navegador.
+Ej:
+// Almacenar datos en LocalStorage
+localStorage.setItem('nombre', 'Maria');
+
+// Obtener datos de LocalStorage
+const nombre = localStorage.getItem('nombre');
+console.log('Nombre:', nombre);
+
+// Almacenar datos en SessionStorage
+sessionStorage.setItem('contador', '42');
+
+// Obtener datos de SessionStorage
+const contador = sessionStorage.getItem('contador');
+console.log('Contador:', contador);
+
+---------------------------------------
+
+IndexedDB: IndexedDB es una base de datos en el navegador que permite almacenar grandes cantidades de datos estructurados. 
+	   Es útil para aplicaciones web que requieren almacenamiento local avanzado y consultas de datos.
+Ej:
+// Abrir o crear una base de datos en IndexedDB
+const request = indexedDB.open('miBaseDeDatos', 1);
+
+// Manejar eventos de éxito y error al abrir la base de datos
+request.onsuccess = event => {
+  const db = event.target.result;
+// Realizar operaciones con la base de datos
+};
+
+request.onerror = event => {
+  console.error('Error al abrir la base de datos:', event.target.error);
+};
+
+---------------------------------------
+Web Storage: Una combinación de LocalStorage y SessionStorage se conoce como Web Storage. 
+	     Ofrece una forma sencilla de almacenar pares clave-valor en el navegador.
+
+Ej:
+// Almacenar datos en Web Storage
+localStorage.setItem('colorFavorito', 'azul');
+
+// Obtener datos de Web Storage
+const color = localStorage.getItem('colorFavorito');
+console.log('Color favorito:', color);
+
+// Eliminar un dato de Web Storage
+localStorage.removeItem('colorFavorito');
